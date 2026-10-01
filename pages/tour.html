@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тур-пакет · Исследуй Кыргызстан</title>
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tour.css">
+</head>
+<body class="page-tour">
+
+<div class="wrapper">
+
+    <header class="header">
+        <div class="container">
+            <div class="inner_header">
+                <a href="../index.html" class="brand-link">
+                    <div class="logotype">
+                        <div class="logo-symbol">
+                            <img src="../assets/kyrgyz.webp" alt="Логотип Кыргызстана">
+                        </div>
+                        <h2>Исследуй <span>Кыргызстан</span></h2>
+                    </div>
+                </a>
+                <ul class="menu">
+                    <li class="menu_link">
+                        <a href="../pages/home_works.html">Инструменты</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/lessons.html">Направления</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/monster.html">Сияние</a>
+                    </li>
+                </ul>
+                <button class="btn" id="btn-get">Связаться с нами</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="tour_hero">
+        <div class="tour_hero_backdrop" id="tour_hero_backdrop"></div>
+        <div class="container">
+            <div class="tour_hero_inner">
+                <a href="../index.html" class="tour_back_link">← Назад к турам</a>
+                <p class="hero-eyebrow" id="tour_eyebrow">Signature package</p>
+                <h1 id="tour_title">Загрузка маршрута...</h1>
+                <p class="tour_hero_text" id="tour_intro">Подбираем детали выбранного путешествия.</p>
+                <div class="tour_hero_meta">
+                    <div class="tour_meta_item">
+                        <span class="tour_meta_label">Стоимость</span>
+                        <strong id="tour_price">—</strong>
+                    </div>
+                    <div class="tour_meta_item">
+                        <span class="tour_meta_label">Длительность</span>
+                        <strong id="tour_duration">—</strong>
+                    </div>
+                    <div class="tour_meta_item">
+                        <span class="tour_meta_label">Формат</span>
+                        <strong id="tour_style">—</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tour_story reveal-section">
+        <div class="container">
+            <div class="tour_story_layout">
+                <div class="tour_story_card">
+                    <p class="section-subtitle section-subtitle-left">Почему этот тур</p>
+                    <h2 class="section-title section-title-left">Кому он подходит</h2>
+                    <p id="tour_story_text">—</p>
+                </div>
+                <div class="tour_image_card">
+                    <img id="tour_story_image" src="" alt="Тур по Кыргызстану">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tour_details reveal-section">
+        <div class="container">
+            <p class="section-subtitle">Детали путешествия</p>
+            <h2 class="section-title">Что включено в маршрут</h2>
+            <div class="divider"></div>
+            <div class="tour_details_grid">
+                <div class="tour_panel">
+                    <h3>Ключевые впечатления</h3>
+                    <ul id="tour_highlights" class="tour_list"></ul>
+                </div>
+                <div class="tour_panel">
+                    <h3>День за днем</h3>
+                    <ul id="tour_itinerary" class="tour_list"></ul>
+                </div>
+                <div class="tour_panel">
+                    <h3>Что входит</h3>
+                    <ul id="tour_includes" class="tour_list"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tour_cta reveal-section">
+        <div class="container">
+            <div class="tour_cta_card">
+                <p class="section-subtitle section-subtitle-left">Персональная настройка</p>
+                <h2 class="section-title section-title-left">Маршрут можно адаптировать под ваш ритм</h2>
+                <p id="tour_cta_text">Мы можем изменить темп, добавить больше озерных остановок, сделать акцент на комфорте или усилить экспедиционную часть.</p>
+                <div class="tour_cta_actions">
+                    <button class="btn" type="button" data-open-modal>Обсудить этот тур</button>
+                    <a class="btn btn-secondary" href="../index.html">Смотреть другие туры</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="inner_footer">
+                <div class="footer-brand">
+                    <h2>🏔️ Исследуй Кыргызстан</h2>
+                    <p>Премиальные маршруты по озерам, каньонам, юртовым стоянкам и вершинам Тянь-Шаня.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html">Главная</a>
+                    <a href="../pages/lessons.html">Направления</a>
+                    <a href="../pages/monster.html">Сияние</a>
+                </div>
+            </div>
+            <p class="footer-copy">© 2026 Исследуй Кыргызстан · Детали вашего маршрута</p>
+        </div>
+    </footer>
+
+</div>
+
+<div class="modal">
+    <div class="modal_dialog">
+        <div class="modal_content">
+            <div class="modal_close">&times;</div>
+            <div class="modal_title">Хотите этот маршрут?<br>Соберем поездку под ваши даты.</div>
+            <form action="#">
+                <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
+                <input required placeholder="Ваш номер телефона" name="phone" type="text" class="modal_input">
+                <button class="btn" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../js/main.js"></script>
+<script src="../js/modal.js"></script>
+<script src="../js/tour.js"></script>
+</body>
+</html>

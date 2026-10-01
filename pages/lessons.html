@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Направления · Путеводитель по Кыргызстану</title>
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lessons.css">
+</head>
+<body class="page-guide">
+
+<div class="wrapper">
+
+    <header class="header">
+        <div class="container">
+            <div class="inner_header">
+                <a href="../index.html" class="brand-link">
+                    <div class="logotype">
+                        <div class="logo-symbol">
+                            <img src="../assets/kyrgyz.webp" alt="Логотип Кыргызстана">
+                        </div>
+                        <h2>Исследуй <span>Кыргызстан</span></h2>
+                    </div>
+                </a>
+                <ul class="menu">
+                    <li class="menu_link">
+                        <a href="../pages/home_works.html">Инструменты</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/lessons.html">Направления</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/monster.html">Сияние</a>
+                    </li>
+                </ul>
+                <button class="btn" id="btn-get">Связаться с нами</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="main_block compact_hero">
+        <div class="container">
+            <div class="inner_main page_intro">
+                <p class="hero-eyebrow">Destination guide</p>
+                <h1>
+                    <span class="typewriter-prefix">Куда</span> <strong id="js-color">отправиться</strong>
+                </h1>
+                <p class="hero-tagline">От бирюзовой воды Иссык-Куля до южной архитектуры Оша: соберите маршрут по настроению, сезону и формату отдыха.</p>
+                <div class="colors-buttons centered-buttons">
+                    <button class="btn-color" style="border-color: #a88252;">Золото</button>
+                    <button class="btn-color" style="border-color: #2f6476;">Озеро</button>
+                    <button class="btn-color" style="border-color: #365648;">Горы</button>
+                    <button class="btn-color" style="border-color: #a95f4b;">Закат</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="phone_block reveal-section">
+        <div class="container">
+            <p class="section-subtitle">База знаний</p>
+            <h2 class="section-title">Проверить направление</h2>
+            <div class="divider"></div>
+            <div class="inner_phone_block">
+                <div class="form_phone">
+                    <label>Название города или региона</label>
+                    <input
+                        id="region_input"
+                        type="text"
+                        placeholder="Например: Бишкек, Ош, Каракол, Нарын..."
+                    >
+                    <button class="btn" id="region_button">Найти информацию</button>
+                </div>
+                <div class="regions_badge_container">
+                    <span class="regions_badge_title">Популярные точки маршрута</span>
+                    <div class="regions_grid">
+                        <span class="region_badge">Бишкек</span>
+                        <span class="region_badge">Ош</span>
+                        <span class="region_badge">Иссык-Куль</span>
+                        <span class="region_badge">Каракол</span>
+                        <span class="region_badge">Нарын</span>
+                        <span class="region_badge">Сон-Куль</span>
+                    </div>
+                </div>
+                <span class="checker" id="region_result"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="tab_slider reveal-section">
+        <div class="container">
+            <p class="section-subtitle">Путеводитель</p>
+            <h2 class="section-title">Главные локации</h2>
+            <div class="divider"></div>
+            <div class="tab_contents_block">
+                <div class="tab_content_items">
+                    <div class="tab_content_item" data-key="issyk">
+                        <span class="tab-icon">🌊</span> Иссык-Куль
+                    </div>
+                    <div class="tab_content_item" data-key="ala-archa">
+                        <span class="tab-icon">🏔️</span> Ала-Арча
+                    </div>
+                    <div class="tab_content_item" data-key="osh">
+                        <span class="tab-icon">🏛️</span> Древний Ош
+                    </div>
+                    <div class="tab_content_item" data-key="song-kol">
+                        <span class="tab-icon">⛺</span> Сон-Куль
+                    </div>
+                    <div class="tab_content_item" data-key="karakol">
+                        <span class="tab-icon">🌲</span> Каракол
+                    </div>
+                </div>
+                <div class="tab_content_block">
+                    <div class="tab_content_img_wrapper" id="tab_content_img_container">
+                        <img id="tab_content_img" src="" alt="Регион">
+                    </div>
+                    <h3 id="tab_content_title">Загрузка информации...</h3>
+                    <p id="tab_content_text">Выберите регион слева, чтобы прочитать краткий luxury-style guide по характеру места.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card_switcher reveal-section">
+        <div class="container">
+            <p class="section-subtitle">Сезонный ритм</p>
+            <h2 class="section-title">Когда ехать лучше всего</h2>
+            <div class="divider"></div>
+            <div class="inner_card_switcher">
+                <button class="btn-slide" id="card_prev">‹</button>
+                <div class="card">
+                    <div class="season_image_wrapper">
+                        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Burana%20Tower%2C%20Kyrgyzstan.jpg" alt="Весна">
+                    </div>
+                    <p>Весна</p>
+                    <span>Апрель — май</span>
+                </div>
+                <div class="card">
+                    <div class="season_image_wrapper">
+                        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Lake%20Issyk-Kul%2C%20Kyrgyzstan.jpg" alt="Лето">
+                    </div>
+                    <p>Лето</p>
+                    <span>Июнь — август</span>
+                </div>
+                <div class="card">
+                    <div class="season_image_wrapper">
+                        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Jeti-Oguz%20rocks%2C%20Issyk%20Kul%20region%2C%20Kyrgyzstan%2002.jpg" alt="Осень">
+                    </div>
+                    <p>Осень</p>
+                    <span>Сентябрь — октябрь</span>
+                </div>
+                <div class="card">
+                    <div class="season_image_wrapper">
+                        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kyrgyzstan%20Burana%20tower.jpg" alt="Зима">
+                    </div>
+                    <p>Зима</p>
+                    <span>Ноябрь — март</span>
+                </div>
+                <button class="btn-slide" id="card_next">›</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="converter reveal-section">
+        <div class="container">
+            <p class="section-subtitle">Финансовый гид</p>
+            <h2 class="section-title">Конвертер валют в сом (KGS)</h2>
+            <div class="divider"></div>
+            <div class="inner_converter">
+                <div class="converter_row">
+                    <div>
+                        <label>Сумма</label>
+                        <input id="amount_input" type="number" placeholder="100" value="100">
+                    </div>
+                    <div>
+                        <label>Исходная валюта</label>
+                        <select id="from_currency">
+                            <option value="USD">🇺🇸 USD — Доллар США</option>
+                            <option value="EUR">🇪🇺 EUR — Евро</option>
+                            <option value="RUB">🇷🇺 RUB — Российский рубль</option>
+                            <option value="KZT">🇰🇿 KZT — Казахстанский тенге</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn" id="convert_btn">Конвертировать</button>
+                    </div>
+                </div>
+                <div class="converter-result" id="convert_result">—</div>
+                <p class="converter-note" id="convert_note">Курс ориентировочный и нужен для планирования бюджета.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="weather reveal-section">
+        <div class="container">
+            <p class="section-subtitle">Климатический календарь</p>
+            <h2 class="section-title">Средняя погода в Бишкеке</h2>
+            <div class="divider"></div>
+            <div class="inner_weather">
+                <div class="weather_row">
+                    <div class="weather_card">
+                        <div class="month">Январь</div>
+                        <div class="temp">-5°C</div>
+                        <div class="desc">Зима</div>
+                    </div>
+                    <div class="weather_card">
+                        <div class="month">Февраль</div>
+                        <div class="temp">-2°C</div>
+                        <div class="desc">Снежно</div>
+                    </div>
+                    <div class="weather_card">
+                        <div class="month">Март</div>
+                        <div class="temp">+8°C</div>
+                        <div class="desc">Оттепель</div>
+                    </div>
+                    <div class="weather_card">
+                        <div class="month">Апрель</div>
+                        <div class="temp">+16°C</div>
+                        <div class="desc">Весна</div>
+                    </div>
+                    <div class="weather_card">
+                        <div class="month">Май</div>
+                        <div class="temp">+22°C</div>
+                        <div class="desc">Тепло</div>
+                    </div>
+                    <div class="weather_card">
+                        <div class="month">Июнь</div>
+                        <div class="temp">+28°C</div>
+                        <div class="desc">Солнечно</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="weather_row">
+                    <div class="weather_card">
+                        <div class="month">Июль</div>
+                        <div class="temp">+32°C</div>
+                        <div class="desc">Жарко</div>
+                    </div>
+                    <div class="weather_card">
+                        <div class="month">Август</div>
+                        <div class="temp">+30°C</div>
+                        <div class="desc">Сухо</div>
+                    </div>
+                    <div class="weather_card">
+                        <div class="month">Сентябрь</div>
+                        <div class="temp">+23°C</div>
+                        <div class="desc">Бархатно</div>
+                    </div>
+                    <div class="weather_card">
+                        <div class="month">Октябрь</div>
+                        <div class="temp">+14°C</div>
+                        <div class="desc">Осень</div>
+                    </div>
+                    <div class="weather_card">
+                        <div class="month">Ноябрь</div>
+                        <div class="temp">+4°C</div>
+                        <div class="desc">Прохладно</div>
+                    </div>
+                    <div class="weather_card">
+                        <div class="month">Декабрь</div>
+                        <div class="temp">-2°C</div>
+                        <div class="desc">Заморозки</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="inner_footer">
+                <div class="footer-brand">
+                    <h2>🏔️ Исследуй Кыргызстан</h2>
+                    <p>Путеводитель по самым выразительным точкам страны: от воды и каньонов до истории и высокогорья.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html">Главная</a>
+                    <a href="home_works.html">Инструменты</a>
+                    <a href="monster.html">Сияние</a>
+                </div>
+            </div>
+            <p class="footer-copy">© 2026 Исследуй Кыргызстан · destination guide edition</p>
+        </div>
+    </footer>
+
+</div>
+
+<div class="modal">
+    <div class="modal_dialog">
+        <div class="modal_content">
+            <div class="modal_close">&times;</div>
+            <div class="modal_title">Нужен маршрут под ваш сезон?<br>Подскажем, куда ехать именно сейчас.</div>
+            <form action="#">
+                <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
+                <input required placeholder="Ваш номер телефона" name="phone" type="text" class="modal_input">
+                <button class="btn" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../js/main.js"></script>
+<script src="../js/modal.js"></script>
+<script src="../js/lesson.js"></script>
+</body>
+</html>

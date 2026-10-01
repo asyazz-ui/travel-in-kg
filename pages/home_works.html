@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инструменты путешественника · Исследуй Кыргызстан</title>
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home_works.css">
+</head>
+<body class="page-tools">
+
+<div class="wrapper">
+
+    <header class="header">
+        <div class="container">
+            <div class="inner_header">
+                <a href="../index.html" class="brand-link">
+                    <div class="logotype">
+                        <div class="logo-symbol">
+                            <img src="../assets/kyrgyz.webp" alt="Логотип Кыргызстана">
+                        </div>
+                        <h2>Исследуй <span>Кыргызстан</span></h2>
+                    </div>
+                </a>
+                <ul class="menu">
+                    <li class="menu_link">
+                        <a href="../pages/home_works.html">Инструменты</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/lessons.html">Направления</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/monster.html">Сияние</a>
+                    </li>
+                </ul>
+                <button class="btn" id="btn-get">Связаться с нами</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="main_block compact_hero">
+        <div class="container">
+            <div class="inner_main page_intro">
+                <p class="hero-eyebrow">Travel concierge tools</p>
+                <h1>
+                    <span class="typewriter-prefix">Инструменты</span> <strong id="js-color">путешественника</strong>
+                </h1>
+                <p class="hero-tagline">Соберите список мечты, отслеживайте движение маршрута и держите под рукой экспедиционный хронометр.</p>
+                <div class="colors-buttons centered-buttons">
+                    <button class="btn-color" style="border-color: #a88252;">Золото</button>
+                    <button class="btn-color" style="border-color: #2f6476;">Озеро</button>
+                    <button class="btn-color" style="border-color: #365648;">Горы</button>
+                    <button class="btn-color" style="border-color: #a95f4b;">Закат</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="saved_block reveal-section">
+        <div class="container">
+            <p class="section-subtitle">Мой bucket list</p>
+            <h2 class="section-title">Карта желаний</h2>
+            <div class="divider"></div>
+            <p class="section-lead">Добавляйте места, которые хочется увидеть лично: озера, ущелья, перевалы и старые города. Список сохраняется в браузере и остается вашим быстрым travel board.</p>
+
+            <div class="save_form">
+                <input
+                    id="dest_input"
+                    type="text"
+                    placeholder="Введите место: Ала-Арча, Сон-Куль, Сары-Челек..."
+                >
+                <button class="btn" id="dest_button">Сохранить</button>
+            </div>
+
+            <div class="saved_list" id="saved_list"></div>
+        </div>
+    </section>
+
+    <section class="move_block reveal-section">
+        <div class="container">
+            <p class="section-subtitle">Экспедиционный радар</p>
+            <h2 class="section-title">Маршрут в движении</h2>
+            <div class="divider"></div>
+
+            <div class="parent_block">
+                <div class="child_block">✈️</div>
+            </div>
+
+            <p class="move-caption">
+                Анимированный трек напоминает диспетчерскую карту перелетов и помогает визуально удержать ритм маршрута между севером и югом страны.
+            </p>
+        </div>
+    </section>
+
+    <section class="stopwatch reveal-section">
+        <div class="container">
+            <p class="section-subtitle">Хронометр маршрута</p>
+            <h2 class="section-title">Время в экспедиции</h2>
+            <div class="divider"></div>
+
+            <div class="time_block">
+                <div class="time">
+                    <span id="hours">00</span>
+                    <span class="time-separator">:</span>
+                    <span id="minutes">00</span>
+                    <span class="time-separator">:</span>
+                    <span id="seconds">00</span>
+                </div>
+            </div>
+
+            <div class="time_buttons">
+                <button class="btn" id="start">Старт</button>
+                <button class="btn" id="stop">Пауза</button>
+                <button class="btn" id="reset">Сброс</button>
+            </div>
+
+            <p class="stopwatch-context">
+                Используйте таймер для треккинга, дорожных переездов или просто чтобы почувствовать ход собственного путешествия.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="inner_footer">
+                <div class="footer-brand">
+                    <h2>🏔️ Исследуй Кыргызстан</h2>
+                    <p>Умные инструменты для красивых маршрутов и спокойного планирования.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html">Главная</a>
+                    <a href="lessons.html">Направления</a>
+                    <a href="monster.html">Сияние</a>
+                </div>
+            </div>
+            <p class="footer-copy">© 2026 Исследуй Кыргызстан · travel planning edition</p>
+        </div>
+    </footer>
+
+</div>
+
+<div class="modal">
+    <div class="modal_dialog">
+        <div class="modal_content">
+            <div class="modal_close">&times;</div>
+            <div class="modal_title">Хотите поездку без перегруза?<br>Подберем маршрут и ритм путешествия.</div>
+            <form action="#">
+                <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
+                <input required placeholder="Ваш номер телефона" name="phone" type="text" class="modal_input">
+                <button class="btn" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../js/main.js"></script>
+<script src="../js/modal.js"></script>
+<script src="../js/home_works.js"></script>
+</body>
+</html>
